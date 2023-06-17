@@ -1,0 +1,257 @@
+/* colors */
+:root {
+    --pink-dark: #F63E7B;
+    --pink: #fdabaf;
+    --pink-light: #ffe0e6;
+    --white: white;
+}
+
+.center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.error {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.number {
+    font-weight: 700;
+    font-size: 12rem;
+    line-height: 1;
+    color: #F63E7B;
+}
+
+.illustration {
+    position: relative;
+    width: 12.2rem;
+    margin: 0 1.7rem;
+}
+
+.circle {
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    width: 10.2rem;
+    height: 8.5rem;
+    border-radius: 50%;
+    background-color: var(--pink-dark);
+}
+
+.clip {
+    position: absolute;
+    bottom: 0.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    width: 12.5rem;
+    height: 13rem;
+    border-radius: 0 0 50% 50%;
+}
+
+.paper {
+    position: absolute;
+    bottom: -0.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7.9rem;
+    height: 10.8rem;
+    border: 0.3rem solid var(--pink-dark);
+    background-color: var(--white);
+    border-radius: 0.8rem;
+}
+
+.paper::before {
+    content: "";
+    position: absolute;
+    top: -0.4rem;
+    right: -0.7rem;
+    width: 1.4rem;
+    height: 1rem;
+    background-color: var(--white);
+    border-bottom: 0.3rem solid var(--pink-dark);
+    transform: rotate(45deg);
+}
+
+.face {
+    position: relative;
+    margin-top: 2.3rem;
+}
+
+.eyes {
+    position: absolute;
+    top: 0;
+    left: 1.4rem;
+    width: 4.6rem;
+    height: 0.8rem;
+}
+
+.eye {
+    position: absolute;
+    bottom: 0;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--pink-dark);
+    animation-name: eye;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.eye-left {
+    left: 0rem;
+}
+
+.eye-right {
+    right: 0rem;
+}
+
+@keyframes eye {
+    0% {
+        height: 0.8rem;
+    }
+
+    50% {
+        height: 0.8rem;
+    }
+
+    52% {
+        height: 0.1rem;
+    }
+
+    54% {
+        height: 0.8rem;
+    }
+
+    100% {
+        height: 0.8rem;
+    }
+}
+
+.rosyCheeks {
+    position: absolute;
+    top: 1.6rem;
+    width: 1rem;
+    height: 0.2rem;
+    border-radius: 50%;
+    background-color: var(--pink);
+}
+
+.rosyCheeks-left {
+    left: 1rem;
+}
+
+.rosyCheeks-right {
+    right: 1rem;
+}
+
+.mouth {
+    position: absolute;
+    top: 3.1rem;
+    left: 50%;
+    width: 1.6rem;
+    height: 0.2rem;
+    border-radius: 0.1rem;
+    transform: translateX(-50%);
+    background-color: var(--pink-dark);
+}
+
+.text {
+    margin-top: 4.5rem;
+    color: var(--pink-dark);
+}
+
+.notFoundButton {
+    margin-top: 4rem;
+    padding: 1.2rem 3rem;
+    color: var(--white);
+    background-color: var(--pink-dark);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.notFoundButton:hover {
+    background-color: #ea0b55;
+}
+
+@media (max-width: 576px) {
+
+    .number {
+        font-weight: 700;
+        font-size: 6rem;
+        line-height: 1;
+        color: #F63E7B;
+    }
+
+    .illustration {
+        position: relative;
+        width: 10.8rem;
+        margin: 0 0.3rem;
+    }
+
+    .circle {
+        position: absolute;
+        bottom: 0;
+        left: 1.5rem;
+        width: 7.8rem;
+        height: 5.1rem;
+        border-radius: 50%;
+        background-color: var(--pink-dark);
+    }
+
+    .clip {
+        position: absolute;
+        bottom: 0.3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+        width: 12.5rem;
+        height: 13rem;
+        border-radius: 0 0 50% 50%;
+    }
+
+    .paper {
+        position: absolute;
+        bottom: -0.3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6.2rem;
+        height: 7rem;
+        border: 0.3rem solid var(--pink-dark);
+        background-color: var(--white);
+        border-radius: 0.8rem;
+    }
+
+    .eye {
+        position: absolute;
+        bottom: 0;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        background-color: var(--pink-dark);
+        animation-name: eye;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    .face {
+        position: relative;
+        margin-top: 1.5rem;
+    }
+
+    .eyes {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        width: 3.5rem;
+        height: 0.8rem;
+    }
+}
